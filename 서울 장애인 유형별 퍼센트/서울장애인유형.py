@@ -122,4 +122,6 @@ while True:
             
             idx +=1
 f.close()
-print(json.dumps(file_data,ensure_ascii=False, indent="\t"))
+
+with open ("output.json",'w')as outfile:
+    json.dump(file_data,outfile,ensure_ascii=False, indent="\t")
