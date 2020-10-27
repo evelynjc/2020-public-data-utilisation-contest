@@ -12,112 +12,127 @@ while True:
     if line.split('\t')[2] == "소계":
             file_data[name_list[idx]]["년도"] = line.split('\t')[0]
             total=""
-            file_data[name_list[idx]]["전체"] = temp = line.split('\t')[3]
+            temp = line.split('\t')[3]
             for temp_s in temp.split(","):
                 total += temp_s
-
-            file_data[name_list[idx]]["지체"] = temp_pd = line.split('\t')[6]
+            file_data[name_list[idx]]["전체"] = total
+            
+            temp_pd = line.split('\t')[6]
             pd =""            
             for temp_s in temp_pd.split(","):
                 pd +=temp_s
+            file_data[name_list[idx]]["지체"]  = pd
             file_data[name_list[idx]]["지체_비율"] = int(pd)/int(total)*100
 
 
-            file_data[name_list[idx]]["뇌병변"] =temp_bl= line.split('\t')[9]
+            temp_bl= line.split('\t')[9]
             bl = ""
             for temp_s in temp_bl.split(","):
                 bl +=temp_s
-
+            file_data[name_list[idx]]["뇌병변"] = bl
             file_data[name_list[idx]]["뇌병변_비율"] = int(bl)/int(total)*100
 
 
-            file_data[name_list[idx]]["시각"] =temp_vi=line.split('\t')[12]
+            temp_vi=line.split('\t')[12]
             vi = ""
             for temp_s in temp_vi.split(","):
                 vi +=temp_s
+            file_data[name_list[idx]]["시각"] = vi
             file_data[name_list[idx]]["시각_비율"] = int(vi)/int(total)*100
 
 
-            file_data[name_list[idx]]["청각"] =temp_hi = line.split('\t')[15]
+            temp_hi = line.split('\t')[15]
             hi = ""
             for temp_s in temp_hi.split(","):
                 hi +=temp_s
+            file_data[name_list[idx]]["청각"] = hi
             file_data[name_list[idx]]["청각_비율"] = int(hi)/int(total)*100
 
             
-            file_data[name_list[idx]]["언어"] = temp_si = line.split('\t')[18]
+            temp_si = line.split('\t')[18]
             si = ""
             for temp_s in temp_si.split(","):
                 si +=temp_s
+            file_data[name_list[idx]]["언어"] = si
             file_data[name_list[idx]]["언어_비율"] = int(si)/int(total)*100
 
             
-            file_data[name_list[idx]]["지적장애"] = temp_id = line.split('\t')[21]
+            temp_id = line.split('\t')[21]
             id = ""
             for temp_s in temp_id.split(","):
                 id +=temp_s
+            file_data[name_list[idx]]["지적장애"] = id
             file_data[name_list[idx]]["지적장애_비율"] = int(id)/int(total)*100
 
             
-            file_data[name_list[idx]]["자폐"] =temp_ad =line.split('\t')[24]
+            temp_ad =line.split('\t')[24]
             ad = ""
             for temp_s in temp_ad.split(","):
                 ad +=temp_s
+            file_data[name_list[idx]]["자폐"] = ad
             file_data[name_list[idx]]["자폐_비율"] = int(ad)/int(total)*100
 
             
-            file_data[name_list[idx]]["정신장애"] = temp_md=line.split('\t')[27]
+            temp_md=line.split('\t')[27]
             md = ""
             for temp_s in temp_md.split(","):
                 md +=temp_s
+            file_data[name_list[idx]]["정신장애"] = md
             file_data[name_list[idx]]["정신장애_비율"] = int(md)/int(total)*100
 
 
-            file_data[name_list[idx]]["신장장애"] =temp_kf = line.split('\t')[30]
+            temp_kf = line.split('\t')[30]
             kf = ""
             for temp_s in temp_kf.split(","):
                 kf +=temp_s
+            file_data[name_list[idx]]["신장장애"] = kf
             file_data[name_list[idx]]["신장장애_비율"] = int(kf)/int(total)*100
 
                 
-            file_data[name_list[idx]]["심장장애"] = temp_hd = line.split('\t')[33]
+            temp_hd = line.split('\t')[33]
             hd=""
             for temp_s in temp_hd.split(","):
                 hd +=temp_s
+            file_data[name_list[idx]]["심장장애"] = hd
             file_data[name_list[idx]]["심장장애_비율"] = int(hd)/int(total)*100
 
 
-            file_data[name_list[idx]]["호흡기"] = temp_rd = line.split('\t')[36]
+            temp_rd = line.split('\t')[36]
             rd=""
             for temp_s in temp_rd.split(","):
                 rd +=temp_s
+            file_data[name_list[idx]]["호흡기"] = rd
             file_data[name_list[idx]]["호흡기_비율"] = int(rd)/int(total)*100
 
 
-            file_data[name_list[idx]]["간"] =temp_ld =  line.split('\t')[39]
+            temp_ld =  line.split('\t')[39]
             ld=""
             for temp_s in temp_ld.split(","):
                 ld +=temp_s
+            file_data[name_list[idx]]["간"] = ld
             file_data[name_list[idx]]["간_비율"] = int(ld)/int(total)*100
 
 
-            file_data[name_list[idx]]["안면"] = temp_fd = line.split('\t')[42]
+            temp_fd = line.split('\t')[42]
             fd=""
             for temp_s in temp_fd.split(","):
                 fd +=temp_s
+            file_data[name_list[idx]]["안면"] = fd
             file_data[name_list[idx]]["안면_비율"] = int(fd)/int(total)*100
 
             
-            file_data[name_list[idx]]["장루요루"] = temp_st = line.split('\t')[45]
+            temp_st = line.split('\t')[45]
             st=""
             for temp_s in temp_st.split(","):
                 st +=temp_s
+            file_data[name_list[idx]]["장루요루"] = st
             file_data[name_list[idx]]["장루요루_비율"] = int(st)/int(total)*100
             
-            file_data[name_list[idx]]["뇌전증"] = temp_e = line.split('\t')[48]
+            temp_e = line.split('\t')[48]
             e=""
             for temp_s in temp_e.split(","):
                 e +=temp_s
+            file_data[name_list[idx]]["뇌전증"] = e
             file_data[name_list[idx]]["장루요루_비율"] = int(e)/int(total)*100
             
             idx +=1
