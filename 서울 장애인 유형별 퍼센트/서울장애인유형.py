@@ -147,7 +147,7 @@ while True:
         for temp_s in temp_e.split(","):
             e += temp_s
         file_data[name_list[idx]]["뇌전증"] = e
-        file_data[name_list[idx]]["장루요루_비율"] = int(e) / int(total) * 100
+        file_data[name_list[idx]]["뇌전증_비율"] = int(e) / int(total) * 100
 
         idx += 1
 f.close()
